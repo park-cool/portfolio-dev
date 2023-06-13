@@ -1,0 +1,232 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+/* Variavel */
+:root {
+    --main-color: #6f3297;
+    --main-text-color: #FFF;
+    --fundo-color2: #190933;
+    --btn-color2: #330055;
+    --secundario: #f5f7f6;
+}
+
+body {
+
+    background-image: url('/img/dragon.svg');
+    background-size: center;
+}
+
+/* Geral */
+.highlight {
+    color: var(--main-color);
+}
+
+/* Containers */
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 30px 12px;
+}
+
+#about-container {
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: var(--fundo-color2);
+    padding: 50px;
+}
+
+/* Bio Container */
+#bio-container h2 {
+    margin-bottom: 25px;
+}
+
+#bio-container p {
+    margin-bottom: 20px;
+}
+
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+#bio-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+#social-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+    padding-top: 25px;
+
+}
+
+#social-container li a {
+    color: var(--secundario);
+    font-size: 30px;
+
+}
+
+#email-container ion-icon,
+#email-container a {
+    flex: 1 1 0;
+}
+
+/* about container */
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#description {
+    max-width: 75%;
+    margin-bottom: 75%;
+}
+
+.btn-projects {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+}
+
+.btn-projects ion-icon,
+.btn-projects span {
+    flex: 1 1 0;
+}
+
+.btn-projects ion-icon {
+    font-size: 20px;
+    max-width: 20px;
+}
+
+.btn-projects:hover {
+    background-color: transparent;
+}
+
+#skills-section-title {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+}
+
+.skills-title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.skills-title ion-icon {
+    color: var(--main-color);
+    padding-right: 10px;
+}
+
+.skills-box i {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+/* Mobile */
+@media(max-width:450px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #bio-container {
+        min-height: auto;
+        border-right: none;
+    }
+
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 60%;
+        margin: 10px auto;
+    }
+
+    #about-container {
+        text-align: center;
+        align-items: center;
+        padding: 30px;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+    }
+
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .skills-box i {
+        font-size: 60px;
+    }
+
+    .btn-projects {
+        width: 100%;
+
+    }
+
+    
+}
